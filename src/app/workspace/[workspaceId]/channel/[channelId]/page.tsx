@@ -11,7 +11,7 @@ import { ChatInput } from "./chat-input";
 import { useGetMessages } from "@/features/messages/api/use-get-messages";
 import { MessageList } from "@/components/message-list";
 
-const channelIdpage = () => {
+const ChannelIdpage = () => {
   const channelId = useChannelId();
 
   const { results, status, loadMore } = useGetMessages({ channelId });
@@ -52,4 +52,4 @@ const channelIdpage = () => {
   );
 };
 
-export default channelIdpage;
+export default ChannelIdpage;
