@@ -12,7 +12,7 @@ import { useGenerateUploadUrl } from "@/features/upload/api/use-generate-upload-
 import { useWorkspaceId } from "@/hooks/use-workpace-id";
 import { useChannelId } from "@/hooks/use-channel-id";
 
-const Editor = dynamic(() => import("@/components/editor"), { ssr: false });
+const Editor = dynamic(() => import("@/components/editor/editor"), { ssr: false });
 
 interface ChatInputProps {
   placeholder: string;

@@ -21,7 +21,7 @@ import { ThreadBar } from "./thread-bar";
 
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 
-const Editor = dynamic(() => import("@/components/editor"), { ssr: false });
+const Editor = dynamic(() => import("@/components/editor/editor"), { ssr: false });
 const Renderer = dynamic(() => import("@/components/renderer"), { ssr: false });
 
 interface MessageProps {
@@ -117,7 +117,6 @@ export const Message = ({
   };
 
   const handleRemove = async () => {
-    console.log("works");
     const ok = await confirm();
 
     if (!ok) return;

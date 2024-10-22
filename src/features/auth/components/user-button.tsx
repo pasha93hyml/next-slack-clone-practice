@@ -12,10 +12,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useAuthActions } from "@convex-dev/auth/react";
-import { useRouter } from "next/navigation";
 
 export const UserButton = () => {
-  const router = useRouter()
   const { signOut } = useAuthActions();
 
   const handleSignOut = async () => {
