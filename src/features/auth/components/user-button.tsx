@@ -19,9 +19,13 @@ export const UserButton = () => {
   const { signOut } = useAuthActions();
 
   const handleSignOut = async () => {
-    await signOut();
-    router.replace("/auth");
-  }
+    try {
+      await signOut();
+      router.push("/auth"); 
+    } catch (error) {
+      console.error("Sign out error:", error);
+    }
+  };
 
   const { data, isLoading } = useCurrentUser();
 
