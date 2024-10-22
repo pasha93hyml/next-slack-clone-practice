@@ -21,7 +21,6 @@ export const UserButton = () => {
   const handleSignOut = async () => {
     try {
       await signOut();
-      console.log('sign out right here');
     } catch (error) {
       console.error("Sign out error:", error);
     }

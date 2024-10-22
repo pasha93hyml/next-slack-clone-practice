@@ -18,8 +18,6 @@ export default function Home() {
 
   const workspaceId = useMemo(() => data?.[0]?._id, [data])
 
-  console.log('re-render main page');
-
   useEffect(() => {
     if(isLoading) {
       return
