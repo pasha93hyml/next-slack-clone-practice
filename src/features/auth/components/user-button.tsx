@@ -21,7 +21,7 @@ export const UserButton = () => {
   const handleSignOut = async () => {
     try {
       await signOut();
-      router.push("/auth"); 
+      console.log('sign out right here');
     } catch (error) {
       console.error("Sign out error:", error);
     }
